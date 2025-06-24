@@ -1,0 +1,39 @@
+.star-border-container {
+  display: inline-block;
+  padding: 0.5px 0;        /* smaller vertical padding */
+  position: relative;
+  border-radius: 26px;      /* smaller curve */
+  overflow: hidden;
+}
+
+.border-gradient-bottom,
+.border-gradient-top {
+  width: 300%;              /* reduce size for more compact look */
+  height: 40%;
+  opacity: 0.6;
+  border-radius: 40%;
+}
+
+.border-gradient-bottom {
+  bottom: -8px;
+  right: -180%;
+  animation: star-movement-bottom linear infinite alternate;
+}
+
+.border-gradient-top {
+  top: -8px;
+  left: -180%;
+  animation: star-movement-top linear infinite alternate;
+}
+
+.inner-content {
+  position: relative;
+  border: 1px solid #222;
+  background: #000;
+  color: white;
+  font-size: 15px;          /* smaller font */
+  text-align: center;
+  padding: 8px 14px;        /* smaller padding */
+  border-radius: 12px;      /* smaller corners */
+  z-index: 1;
+}

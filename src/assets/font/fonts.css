@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Tallica';
+  src: url('./Tallica-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MariosBlack';
+  src: url('./Marios-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LugioSans';
+  src: url('./LugioSansDEMO-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PeckhamPress';
+  src: url('./PeckhamPress.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Moderniz';
+  src: url('./Moderniz.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'La Macchina';
+  src: url('./La Macchina.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Berdano-Regular';
+  src: url('./Berdano-Regular.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Besought';
+  src: url('./Besought.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LeagueSpartanB';
+  src: url('./LeagueSpartan-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('./Metropolis.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}

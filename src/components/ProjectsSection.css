@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.carousel-projects-section {
+  width: 100%;
+  min-height: 100vh;
+  background: blacka;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+}
+.projects-heading {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "Moderniz", sans-serif;
+  color: #aaaaff;
+  animation: textShine 8s ease-in-out infinite alternate;
+  margin-bottom: 50px;
+}
+.cslhead {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 6rem;
+  z-index: 2;
+  position: relative;
+}
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 70px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.carousel-cards {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #1b1919;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.carousel-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carousel-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Moderniz",sans-serif;
+}
+
+.carousel-description {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  font-family: "LugioSans",sans-serif;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.carousel-description::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.carousel-chip {
+  background-color: #ece7fb;
+  color: #6b51c6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.carousel-links {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.carousel-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #4a2191;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.carousel-links a:hover {
+  background-color: #8e6dc6;
+}
+
+/* Positioning the cards */
+#item-1:checked ~ .carousel-cards #project-1,
+#item-2:checked ~ .carousel-cards #project-2,
+#item-3:checked ~ .carousel-cards #project-3,
+#item-4:checked ~ .carousel-cards #project-4 {
+  transform: translateX(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
+#item-1:checked ~ .carousel-cards #project-2,
+#item-2:checked ~ .carousel-cards #project-3,
+#item-3:checked ~ .carousel-cards #project-4,
+#item-4:checked ~ .carousel-cards #project-1 {
+  transform: translateX(40%) scale(0.9);
+  z-index: 2;
+  opacity: 0.6;
+}
+
+#item-1:checked ~ .carousel-cards #project-4,
+#item-2:checked ~ .carousel-cards #project-1,
+#item-3:checked ~ .carousel-cards #project-2,
+#item-4:checked ~ .carousel-cards #project-3 {
+  transform: translateX(-40%) scale(0.9);
+  z-index: 2;
+  opacity: 0.6;
+}
+
+#item-1:checked ~ .carousel-cards #project-3,
+#item-2:checked ~ .carousel-cards #project-4,
+#item-3:checked ~ .carousel-cards #project-1,
+#item-4:checked ~ .carousel-cards #project-2 {
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}

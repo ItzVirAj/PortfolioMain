@@ -1,0 +1,210 @@
+/* General home section styles */
+.home {
+  min-height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.Earth {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.Earth img {
+  width: 100%;
+  max-height: 40vh; /* Adjust as needed */
+  object-fit: cover;
+  display: block;
+}
+
+/* Home content container should float above the Earth image */
+.homecntnr {
+  position: relative;
+  z-index: 1; /* Make sure it stays above the Earth image */
+  margin-top: 200px; /* Adjust this to control how high the content appears */
+  padding-bottom: 300px; /* Optional: ensures space above Earth */
+}
+
+/* Intro tag styling */
+.intro-tag {
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #cfcfcf;
+  z-index: 5; /* Ensure it's under the black hole */
+  position: relative; /* Add relative positioning */
+  margin-top: 0px;
+  z-index: 1; /* Adjust this value to create space between the black hole and the intro tag */
+}
+
+.intro-tag span {
+  color: #aaaaff;
+  font-weight: 600;
+}
+
+/* Headline styles */
+.headline {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  z-index: 1;
+  font-family: "PeckhamPress", sans-serif;
+}
+.highlight {
+  color: #aaaaff;
+}
+.headline .italic {
+  font-style: italic;
+  font-size: 4.4rem;
+  font-family: "Georgia", serif;
+  color: #aaaaff;
+  font-family: "La Macchina", sans-serif;
+}
+
+/* Bio section styles */
+.bio {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "MariosBlack", sans-serif;
+}
+.role-wrapper {
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+}
+
+.bio .name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Call-to-action section styles */
+.cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.connect-button {
+  background: #ffffff0d;
+  border: 1px solid #ffffff33;
+  border-radius: 999px;
+  padding: 10px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-family: "LugioSans", sans-serif;
+}
+
+.connect-button:hover {
+  background: #ffffff22;
+  transform: scale(1.05);
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+/* Email section styling */
+.email {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #aaaaff;
+  display: flex;
+  align-items: center;
+}
+
+.copy-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.copy-feedback {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 5px;
+  font-weight: 500;
+  opacity: 30%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .homecntnr {
+    padding-bottom: 0; /* 🛠 remove extra bottom space */
+  }
+  .home {
+    min-height: auto; /* override on mobile if needed */
+  }
+  .Earth {
+    position: static;
+    max-height: 30vh;
+    margin-top: 40px; /* adjust to fine-tune spacing under content */
+    z-index: 0;
+  }
+
+  .Earth img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .headline {
+    font-size: 2.2rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .connect-button {
+    padding: 8px 20px;
+  }
+
+  .email {
+    font-size: 0.9rem;
+  }
+  .italic {
+  }
+}
