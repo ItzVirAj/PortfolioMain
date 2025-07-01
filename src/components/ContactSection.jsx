@@ -95,10 +95,10 @@ const ContactSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaEnvelope /> viruuum@gmail.com
+            <FaEnvelope /> virajm0812@gmail.com
           </a>
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/918668926338"
             className="contact-option"
             target="_blank"
             rel="noopener noreferrer"
