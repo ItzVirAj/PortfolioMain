@@ -47,7 +47,7 @@ const RotatingText = () => {
 
 const HomeSection = () => {
   const [copySuccess, setCopySuccess] = useState(false);
-  const email = "hello@viruu.in";
+  const email = "virajm0812@gmail.com";
 
   const earthRef = useRef(null);
   const isEarthInView = useInView(earthRef, { once: true });
@@ -63,7 +63,7 @@ const HomeSection = () => {
   return (
     <section id="home" className="home">
       <div className="intro-tag">
-        New <span>Next Ventures is live!</span>
+        Building <span>something big!</span>
       </div>
 
       {/* Zoom-in animation on load */}
